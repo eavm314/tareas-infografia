@@ -1,0 +1,7 @@
+# definicion de constantes
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+SCREEN_TITLE = "Tank"
+
+SPEED = 5
+ANGULAR_SPEED = 2
