@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdukp8c0ca3tv"]
+
+[ext_resource type="Texture2D" uid="uid://he84gh85di4d" path="res://Sprites/bart.png" id="1_fuhat"]
+[ext_resource type="Script" path="res://Scenes/Personaje.gd" id="1_u1x6c"]
+
+[node name="Personaje" type="Node2D"]
+script = ExtResource("1_u1x6c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_fuhat")

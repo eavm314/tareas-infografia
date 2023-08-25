@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://d1at4aw32mgye"]
+
+[ext_resource type="PackedScene" uid="uid://bdukp8c0ca3tv" path="res://Scenes/Personaje.tscn" id="1_dr1uq"]
+[ext_resource type="Texture2D" uid="uid://fbbd53uybhad" path="res://Sprites/up.png" id="2_qtcmc"]
+[ext_resource type="Texture2D" uid="uid://seyrowi62s5n" path="res://Sprites/right.png" id="3_7bqrg"]
+[ext_resource type="Texture2D" uid="uid://b2wx6lqtl74d5" path="res://Sprites/left.png" id="4_dyv0w"]
+[ext_resource type="Texture2D" uid="uid://booqibkwphep4" path="res://Sprites/down.png" id="5_qic6x"]
+[ext_resource type="Texture2D" uid="uid://b0vngxn6tsr6u" path="res://Sprites/horario.png" id="6_trpht"]
+[ext_resource type="Texture2D" uid="uid://ctydnepadbnh5" path="res://Sprites/antihorario.png" id="7_o3pk5"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Personaje" parent="." instance=ExtResource("1_dr1uq")]
+position = Vector2(643, 390)
+
+[node name="Up" type="Button" parent="."]
+layout_direction = 2
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 344.0
+offset_top = 31.0
+offset_right = 484.0
+offset_bottom = 166.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+icon = ExtResource("2_qtcmc")
+
+[node name="Right" type="Button" parent="."]
+offset_left = 423.0
+offset_top = 110.0
+offset_right = 547.0
+offset_bottom = 248.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("3_7bqrg")
+
+[node name="Left" type="Button" parent="."]
+offset_left = 269.0
+offset_top = 106.0
+offset_right = 403.0
+offset_bottom = 252.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("4_dyv0w")
+
+[node name="Down" type="Button" parent="."]
+offset_left = 348.0
+offset_top = 178.0
+offset_right = 480.0
+offset_bottom = 301.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("5_qic6x")
+
+[node name="Horario" type="Button" parent="."]
+offset_left = 900.0
+offset_top = 78.0
+offset_right = 1420.0
+offset_bottom = 598.0
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("6_trpht")
+
+[node name="Antihorario" type="Button" parent="."]
+offset_left = 752.0
+offset_top = 84.0
+offset_right = 1272.0
+offset_bottom = 604.0
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("7_o3pk5")
+
+[connection signal="button_down" from="Up" to="Personaje" method="_on_up_button_down"]
+[connection signal="button_up" from="Up" to="Personaje" method="_on_up_button_up"]
+[connection signal="button_down" from="Right" to="Personaje" method="_on_right_button_down"]
+[connection signal="button_up" from="Right" to="Personaje" method="_on_right_button_up"]
+[connection signal="button_down" from="Left" to="Personaje" method="_on_left_button_down"]
+[connection signal="button_up" from="Left" to="Personaje" method="_on_left_button_up"]
+[connection signal="button_down" from="Down" to="Personaje" method="_on_down_button_down"]
+[connection signal="button_up" from="Down" to="Personaje" method="_on_down_button_up"]
+[connection signal="button_down" from="Horario" to="Personaje" method="_on_horario_button_down"]
+[connection signal="button_up" from="Horario" to="Personaje" method="_on_horario_button_up"]
+[connection signal="button_down" from="Antihorario" to="Personaje" method="_on_antihorario_button_down"]
+[connection signal="button_up" from="Antihorario" to="Personaje" method="_on_antihorario_button_up"]
